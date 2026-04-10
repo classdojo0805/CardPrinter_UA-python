@@ -1,1 +1,0 @@
-# CardPrinter_UA-python
