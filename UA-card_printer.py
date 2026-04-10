@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import pandas as pd  # 用於處理 Excel 文件
+import pandas as pd 
 import os
 import time
 import requests
@@ -54,15 +54,15 @@ fade_in()
 
 root.mainloop()
 
-speace = []  # 用於存儲空格數量的列表
+speace = []  
 n = 0
-# 設定圖片來源資料夾與輸出 PDF 路徑
+
 image_folder = "C:/Users/user/Documents/Card_py/UA_png"
 output_pdf_path = "C:/Users/user/Documents/Card_py/PDF"
 
 # 設定 Chrome WebDriver
 options = webdriver.ChromeOptions()
-#options.add_argument('--headless')  # 如果需要無頭模式，可以取消註解
+#options.add_argument('--headless')  
 options.add_argument('--ignore-certificate-errors')
 options.add_argument('--allow-insecure-localhost')
 os.makedirs("C:/Users/user/Documents/Card_py/UA_png", exist_ok=True)
@@ -70,7 +70,7 @@ os.makedirs("C:/Users/user/Documents/Card_py/UA_png", exist_ok=True)
 
 for file_name in os.listdir(image_folder):
     
-    if file_name.endswith(".jpg"):  # 找到所有 .txt 檔案
+    if file_name.endswith(".jpg"):  
         os.remove(os.path.join(image_folder, file_name))
         print(f"{file_name} 已刪除")
 
@@ -89,7 +89,7 @@ def download_image(img_url, save_path):
 
 
 
-delay_time = 30  # 等待時間（秒）
+delay_time = 30  
 
 # 用於存儲卡片數據的列表
 card_data = []
